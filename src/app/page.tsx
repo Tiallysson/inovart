@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next"
 
 const about = "https://www.instagram.com/p/DTQauwTjrN5/?igsh=MTR6eHM3eDd6azdibg==";
 const contact = "";
@@ -15,7 +16,7 @@ export default function Home() {
           bg-linear-to-r from-zinc-300 via-zinc-100 to-zinc-300
           shadow-[inset_60px_0_80px_-40px_rgba(0,0,0,0.30),inset_-60px_0_80px_-40px_rgba(0,0,0,0.30)]
         ">
-
+          <Analytics/>
           <header className="flex p-1.5 md:p-2.5 justify-center">
             <div className="w-full max-w-2xs md:max-w-5xl mt-20">
               <Link href="#" className="bg-[#e4600f] p-2.5 text-xs md:text-base text-white rounded-2xl">
