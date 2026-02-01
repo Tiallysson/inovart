@@ -29,9 +29,9 @@ export default function Home() {
               <h1 className="whitespace-nowrap text-2xl sm:text-5xl md:text-7xl lg:text-8xl text-gray-700 font-poppins">Inov<span className="text-[#e4600f]">art</span> Designer</h1>
               <h1 className="whitespace-nowrap text-xl sm:text-3xl md:text-5xl lg:text-7xl font-brittany text-gray-700">Inovação + Arte, em cada detalhe!</h1>
             </div>
-            <div className="max-w-24 md:max-w-3xl">
+            <div className="max-w-24 md:max-w-3xl p-3">
               <Image
-                src="/images/inovart-logo.png"
+                src="/images/inovart-logo-v2.png"
                 alt="logo"
                 width={300}
                 height={200}
