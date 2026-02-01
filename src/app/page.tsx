@@ -26,8 +26,8 @@ export default function Home() {
           </header>
           <div className="flex flex-row p-8 justify-center">
             <div className="flex flex-col gap-3 md:gap-10 -rotate-z-6">
-              <h1 className="text-2xl md:text-8xl font-kagitingan text-gray-700">Inov<span className="text-[#e4600f]">art</span> Designer</h1>
-              <h1 className="text-xl md:text-6xl font-brittany text-gray-700">Inovação + Arte, em cada detalhe!</h1>
+              <h1 className="whitespace-nowrap text-2xl sm:text-5xl md:text-7xl lg:text-8xl text-gray-700 font-poppins">Inov<span className="text-[#e4600f]">art</span> Designer</h1>
+              <h1 className="whitespace-nowrap text-xl sm:text-3xl md:text-5xl lg:text-7xl font-brittany text-gray-700">Inovação + Arte, em cada detalhe!</h1>
             </div>
             <div className="max-w-24 md:max-w-3xl">
               <Image
@@ -46,10 +46,10 @@ export default function Home() {
             <Link href={portfolio} className="bg-[#e4600f] px-4 md:px-8 p-1.5 md:p-2.5 text-xs md:text-base text-white rounded-2xl" >PORTFÓLIO</Link>
           </div>
 
-          <div className="flex flex-col md:flex-row p-8 justify-center gap-5">
-            <div className="w-85">
+          <div className="flex flex-col md:flex-row p-8 w-full justify-center items-center gap-5">
+            <div className="w-full sm:w-72 md:w-85">
               <div className="relative overflow-hidden rounded-3xl border border-white/30 bg-zinc-900 shadow-lg">
-                <div className="relative h-47.5 w-full">
+                <div className="relative h-40 sm:h-44 md:h-47.5 w-full">
                   <Image
                     src="/images/camisa.jpg"
                     alt="Fardamentos"
@@ -72,9 +72,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-85">
+            <div className="w-full sm:w-72 md:w-85">
               <div className="relative overflow-hidden rounded-3xl border border-white/30 bg-zinc-900 shadow-lg">
-                <div className="relative h-47.5 w-full">
+                <div className="relative h-40 sm:h-44 md:h-47.5 w-full">
                   <Image
                     src="/images/identidade-visual.png"
                     alt="Logo"
@@ -97,9 +97,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-85">
+            <div className="w-full sm:w-72 md:w-85">
               <div className="relative overflow-hidden rounded-3xl border border-white/30 bg-zinc-900 shadow-lg">
-                <div className="relative h-47.5 w-full">
+                <div className="relative h-40 sm:h-44 md:h-47.5 w-full">
                   <Image
                     src="/images/banner.png"
                     alt="Artes"
