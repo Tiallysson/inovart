@@ -6,7 +6,6 @@ import { Analytics } from "@vercel/analytics/next";
 import { Button, Carousel } from 'antd';
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { useState } from "react";
-import InstagramModal from "@/components/modals/InstagramModal";
 import FullScreenModal from "@/components/modals/FullScreenModal";
 
 const contact = "";
@@ -18,25 +17,54 @@ const photos = [
   "/images/621096884_17845658868673601_8741044131485810213_n.jpg",
   "/images/616221341_738151312283363_7777134836960121802_n.jpg",
   "/images/615721164_1411867607190660_2706016865349584871_n.jpg",
-  "/images/611596243_870970812571994_4906170177744514941_n.jpg"
+  "/images/611596243_870970812571994_4906170177744514941_n.jpg",
+  "/images/carrousel/Cópia de camisa gustavo (Apresentação) (1).png",
+  "/images/carrousel/Cópia de camisa gustavo (Apresentação).png",
+  "/images/carrousel/Cópia de Cópia de 42 KM (Apresentação).png",
+  "/images/carrousel/Inovart (Apresentação).png",
+  "/images/carrousel/LOGO 3.0 (Apresentação).png",
+  "/images/carrousel/Logo OFICIAL Inovart (Apresentação).png",
+  "/images/carrousel/Maratona João Pessoa (Apresentação).png",
+  "/images/carrousel/Red and Pink Modern Makeup Studio Logo (Apresentação).png",
+  "/images/carrousel/The Goat (Apresentação).png",
 ];
 
 const carouselImages = [
   {
-    src: "/images/672348960_17864692641673601_725803302733621710_n.heic",
+    src: "/images/carrousel/Cópia de camisa gustavo (Apresentação) (1).png",
     alt: "Portfólio 1",
   },
   {
-    src: "/images/banner.png",
+    src: "/images/carrousel/Cópia de camisa gustavo (Apresentação).png",
     alt: "Portfólio 2",
   },
   {
-    src: "/images/camisa.jpg",
+    src: "/images/carrousel/Cópia de Cópia de 42 KM (Apresentação).png",
     alt: "Portfólio 3",
   },
   {
-    src: "/images/identidade-visual.png",
+    src: "/images/carrousel/Inovart (Apresentação).png",
     alt: "Portfólio 4",
+  },
+  {
+    src: "/images/carrousel/LOGO 3.0 (Apresentação).png",
+    alt: "Portfólio 5",
+  },
+  {
+    src: "/images/carrousel/Logo OFICIAL Inovart (Apresentação).png",
+    alt: "Portfólio 6",
+  },
+  {
+    src: "/images/carrousel/Maratona João Pessoa (Apresentação).png",
+    alt: "Portfólio 7",
+  },
+  {
+    src: "/images/carrousel/Red and Pink Modern Makeup Studio Logo (Apresentação).png",
+    alt: "Portfólio 8",
+  },
+  {
+    src: "/images/carrousel/The Goat (Apresentação).png",
+    alt: "Portfólio 9",
   },
 ];
 
@@ -79,84 +107,6 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="flex flex-col md:flex-row p-8 w-full justify-center items-center gap-5">
-            <div className="w-full sm:w-72 md:w-85">
-              <div className="relative overflow-hidden rounded-3xl border border-white/30 bg-zinc-900 shadow-lg">
-                <div className="relative h-40 sm:h-44 md:h-47.5 w-full">
-                  <Image
-                    src="/images/camisa.jpg"
-                    alt="Fardamentos"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-
-                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/25 to-transparent" />
-
-                <div className="absolute inset-0 flex flex-col justify-end p-6">
-                  <h2 className="text-3xl font-bold text-white">Fardamentos</h2>
-                  <p className="mt-1 max-w-[26ch] text-sm font-medium text-white/80">
-                    Futebol, faculdade, empresas, entre outras.
-                  </p>
-                </div>
-
-                <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/20" />
-              </div>
-            </div>
-
-            <div className="w-full sm:w-72 md:w-85">
-              <div className="relative overflow-hidden rounded-3xl border border-white/30 bg-zinc-900 shadow-lg">
-                <div className="relative h-40 sm:h-44 md:h-47.5 w-full">
-                  <Image
-                    src="/images/identidade-visual.png"
-                    alt="Logo"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-
-                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/25 to-transparent" />
-
-                <div className="absolute inset-0 flex flex-col justify-end p-6">
-                  <h2 className="text-3xl font-bold text-white">Identidade Visual</h2>
-                  <p className="mt-1 max-w-[26ch] text-sm font-medium text-white/80">
-                    Sua empresa ou negócio transmitindo a imagem correta.
-                  </p>
-                </div>
-
-                <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/20" />
-              </div>
-            </div>
-
-            <div className="w-full sm:w-72 md:w-85">
-              <div className="relative overflow-hidden rounded-3xl border border-white/30 bg-zinc-900 shadow-lg">
-                <div className="relative h-40 sm:h-44 md:h-47.5 w-full">
-                  <Image
-                    src="/images/banner.png"
-                    alt="Artes"
-                    width={300}
-                    height={200}
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-
-                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/25 to-transparent" />
-
-                <div className="absolute inset-0 flex flex-col justify-end p-6">
-                  <h2 className="text-3xl font-bold text-white">Artes Digitais</h2>
-                  <p className="mt-1 max-w-[26ch] text-sm font-medium text-white/80">
-                    Divulgação de eventos de toda e qualquer espécie.
-                  </p>
-                </div>
-
-                <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/20" />
-              </div>
-            </div>
-          </div>
-
           <div className="w-full flex justify-center py-8">
             <div className="w-full max-w-5xl px-4">
               <Carousel autoplay>
@@ -177,6 +127,105 @@ export default function Home() {
             </div>
           </div>
 
+         <div className="flex flex-col md:flex-row p-8 w-full justify-center items-center gap-5">
+            {/* Fardamentos */}
+            <div className="w-full sm:w-72 md:w-85">
+              <div className="group relative overflow-hidden rounded-3xl bg-zinc-900 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-orange-500 hover:shadow-2xl cursor-pointer">
+
+                <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-orange-500/20 blur-3xl" />
+
+                <div className="relative h-40 sm:h-44 md:h-48 w-full">
+                  <Image
+                    src="/images/camisa.jpg"
+                    alt="Fardamentos"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    priority
+                  />
+                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+
+                <div className="absolute inset-0 flex flex-col justify-end p-6">
+                  <h2 className="text-2xl md:text-3xl font-bold text-white">
+                    🎽 Fardamentos
+                  </h2>
+
+                  <p className="mt-2 text-sm text-white/90">
+                    Futebol, faculdade, empresas e muito mais.
+                  </p>
+                </div>
+
+                <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/10" />
+              </div>
+            </div>
+
+            {/* Identidade Visual */}
+            <div className="w-full sm:w-72 md:w-85">
+              <div className="group relative overflow-hidden rounded-3xl bg-zinc-900 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-orange-500 hover:shadow-2xl cursor-pointer">
+
+                <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-orange-500/20 blur-3xl" />
+
+                <div className="relative h-40 sm:h-44 md:h-48 w-full">
+                  <Image
+                    src="/images/identidade-visual.png"
+                    alt="Identidade Visual"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    priority
+                  />
+                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+
+                <div className="absolute inset-0 flex flex-col justify-end p-6">
+                  <h2 className="text-2xl md:text-3xl font-bold text-white">
+                    🎨 Identidade Visual
+                  </h2>
+
+                  <p className="mt-2 text-sm text-white/90">
+                    Sua marca transmitindo profissionalismo e confiança.
+                  </p>
+                </div>
+
+                <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/10" />
+              </div>
+            </div>
+
+            {/* Artes Digitais */}
+            <div className="w-full sm:w-72 md:w-85">
+              <div className="group relative overflow-hidden rounded-3xl bg-zinc-900 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-orange-500 hover:shadow-2xl cursor-pointer">
+
+                <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-orange-500/20 blur-3xl" />
+
+                <div className="relative h-40 sm:h-44 md:h-48 w-full">
+                  <Image
+                    src="/images/banner.png"
+                    alt="Artes Digitais"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    priority
+                  />
+                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+
+                <div className="absolute inset-0 flex flex-col justify-end p-6">
+                  <h2 className="text-2xl md:text-3xl font-bold text-white">
+                    📱 Artes Digitais
+                  </h2>
+
+                  <p className="mt-2 text-sm text-white/90">
+                    Divulgação de eventos, campanhas e conteúdo para redes sociais.
+                  </p>
+                </div>
+
+                <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/10" />
+              </div>
+            </div>
+
+          </div>
+
         <footer className="w-full">
           <div className="mx-auto max-w-6xl px-4 py-6">
             <div className="flex flex-col items-center gap-4 text-center md:flex-row md:justify-center md:text-center">
@@ -190,6 +239,11 @@ export default function Home() {
               © {new Date().getFullYear()} Inovart Design. Todos os direitos reservados. <br />
               Developed by <Link href="https://instagram.com/tiallyssoncosta">Tiallysson Costa</Link>
             </div>
+
+            <div className="text-xs text-center text-zinc-400 mt-3">
+              <p>Adidas e suas marcas, logotipos e elementos visuais são propriedade da adidas AG. Uso apenas para fins informativos/ilustrativos, sem afiliação oficial.</p>
+              <p>Logotipos e escudos exibidos são usados apenas para fins ilustrativos e pertencem aos seus proprietários legais.</p>
+            </div>
           </div>
         </footer>
 
@@ -197,22 +251,34 @@ export default function Home() {
           isOpen={gallery}
           onClose={() => openGallery(false)}
         >
-          <div className="p-3">
-            <h1 className="text-3xl font-bold text-black mb-3">
-              Galeria
-            </h1>
+          <div className="p-2 mt-7">
+            <div className="flex items-center justify-between mb-6">
+              <h1 className="text-3xl font-bold text-black">
+                Galeria
+              </h1>
+
+              <a
+                href="https://www.instagram.com/inovart.designer_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500 text-white font-medium transition-all duration-200 hover:bg-orange-600 hover:scale-105"
+              >
+                Ver mais
+                <ArrowRightOutlined />
+              </a>
+            </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {photos.map((photo, index) => (
                 <div
                   key={index}
-                  className="relative aspect-square overflow-hidden rounded-xl"
+                  className="relative aspect-square overflow-hidden rounded-xl cursor-pointer"
                 >
                   <Image
                     src={photo}
                     alt={`Foto ${index + 1}`}
                     fill
-                    className="object-cover transition duration-300 hover:scale-105"
+                    className="object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </div>
               ))}
@@ -310,11 +376,88 @@ export default function Home() {
             </div>
           </div>
         </FullScreenModal>
+
+        <FullScreenModal
+          isOpen={open}
+          onClose={() => setOpen(false)}
+        >
+          <div className="max-w-2xl mx-auto p-6 text-black">
+            <h1 className="text-3xl font-bold mb-3">
+              Entre em Contato
+            </h1>
+
+            <p className="text-zinc-600 mb-8">
+              Tem uma ideia, projeto ou precisa de um orçamento?
+              Entre em contato e vamos transformar sua visão em algo único.
+            </p>
+
+            <div className="space-y-4">
+              {/* <a
+                href="https://wa.me/5582999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between p-5 rounded-2xl bg-green-50 border border-green-200 hover:bg-green-100 transition"
+              >
+                <div>
+                  <h2 className="font-semibold text-lg">
+                    WhatsApp
+                  </h2>
+                  <p className="text-sm text-zinc-600">
+                    Atendimento rápido e orçamento.
+                  </p>
+                </div>
+
+                <span className="text-2xl">💬</span>
+              </a> */}
+
+              <a
+                href="https://instagram.com/inovart.designer_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between p-5 rounded-2xl bg-pink-50 border border-pink-200 hover:bg-pink-100 transition"
+              >
+                <div>
+                  <h2 className="font-semibold text-lg">
+                    Instagram
+                  </h2>
+                  <p className="text-sm text-zinc-600">
+                    Veja nossos trabalhos e envie uma mensagem.
+                  </p>
+                </div>
+
+                <span className="text-2xl">📸</span>
+              </a>
+
+              {/* <a
+                href="mailto:contato@inovart.com.br"
+                className="flex items-center justify-between p-5 rounded-2xl bg-blue-50 border border-blue-200 hover:bg-blue-100 transition"
+              >
+                <div>
+                  <h2 className="font-semibold text-lg">
+                    E-mail
+                  </h2>
+                  <p className="text-sm text-zinc-600">
+                    Para propostas e solicitações detalhadas.
+                  </p>
+                </div>
+
+                <span className="text-2xl">✉️</span>
+              </a> */}
+            </div>
+
+            <div className="mt-10 rounded-2xl bg-orange-50 border border-orange-200 p-5">
+              <p className="font-medium text-orange-700">
+                INOVART — onde a criatividade ganha forma.
+              </p>
+
+              <p className="text-sm text-zinc-600 mt-2">
+                Logotipos, identidade visual, artes para redes sociais,
+                banners, convites e muito mais.
+              </p>
+            </div>
+          </div>
+        </FullScreenModal>
       </main>
-       <InstagramModal
-        isOpen={open}
-        onClose={() => setOpen(false)}
-      />
     </div>
   );
 }
