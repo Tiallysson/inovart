@@ -185,11 +185,17 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.8 }}
-              className="mt-14 flex flex-wrap justify-center gap-6 md:gap-12 text-zinc-700 font-semibold text-sm md:text-base bg-white/40 px-8 py-4 rounded-full backdrop-blur-sm border border-white/50 shadow-sm"
+              className="mt-14 flex flex-wrap justify-center gap-3"
             >
-              <div className="flex items-center gap-2"><StarOutlined className="text-orange-500 text-xl" /> Design Exclusivo</div>
-              <div className="flex items-center gap-2"><ThunderboltOutlined className="text-orange-500 text-xl" /> Entrega Rápida</div>
-              <div className="flex items-center gap-2"><RocketOutlined className="text-orange-500 text-xl" /> Foco em Resultados</div>
+              <div className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/60 backdrop-blur-sm border border-white/60 shadow-sm text-zinc-700 font-semibold text-sm">
+                <StarOutlined className="text-orange-500 text-base" /> Design Exclusivo
+              </div>
+              <div className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/60 backdrop-blur-sm border border-white/60 shadow-sm text-zinc-700 font-semibold text-sm">
+                <ThunderboltOutlined className="text-orange-500 text-base" /> Entrega Rápida
+              </div>
+              <div className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/60 backdrop-blur-sm border border-white/60 shadow-sm text-zinc-700 font-semibold text-sm">
+                <RocketOutlined className="text-orange-500 text-base" /> Foco em Resultados
+              </div>
             </motion.div>
           </div>
 
