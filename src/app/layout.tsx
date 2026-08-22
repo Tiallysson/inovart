@@ -7,7 +7,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: "700", variable: "--font-p
 
 export const metadata: Metadata = {
   title: "Inovart Design",
-  description: "Inovart by Jamerson Farias - Powered by Tiallysson Costa",
+  description: "Inovart by Jamerson Farias - Developed by Tiallysson Costa",
 };
 
 export default function RootLayout({
